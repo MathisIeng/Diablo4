@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'DiabloLight';
+    src: url(../font/DiabloLight.ttf);
+}
+
+@font-face {
+    font-family: 'Bildbad';
+    src: url(../font/Bildad.ttf);
+}
+
+@font-face {
+    font-family: 'Diablo';
+    src: url(../font/diablo.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import '_header.scss';
+@import '_main.scss';
+@import '_footer.scss';
+@import '_firstsection.scss';
+@import '_secondsection.scss';
+@import '_thirdsection.scss';
+@import '_fourthsection.scss';
+@import '_fifthsection.scss';
+@import '_firstarticle.scss';
+@import '_secondarticle.scss';
+@import '_figure.scss';
+@import '_pub.scss';
+
+
+
+
+

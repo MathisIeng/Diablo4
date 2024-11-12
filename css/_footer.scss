@@ -1,0 +1,56 @@
+@import '_var.scss';
+
+#restezconnectes {
+    font-family: 'Bildbad';
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 50px;
+}
+footer {
+    @include displayBetween;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    background: linear-gradient(to top, greenyellow, black);
+    div {
+        width: 15%;
+        margin-left: 30px;
+        img {
+            @include imgSize;
+        }
+    }
+    nav {
+        width: 15%;
+        ul {
+            @include displayEvenly;
+            list-style-type: none;
+            li {
+                a {
+                    img {
+                        @include imgSize;
+                    }
+                    #twitter {
+                        width: 40%;
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    div {
+        width: 15%;
+        margin-right: 30px;
+        button {
+            background-color: greenyellow;
+            color: white;
+            font-family: 'Bildbad';
+            padding: 3px 6px;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: black;
+            color: greenyellow;
+        }
+    }
+}

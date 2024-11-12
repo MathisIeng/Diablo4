@@ -1,0 +1,61 @@
+@import '_var.scss';
+
+section:nth-of-type(3) {
+    background-color: $bgColorBlack;
+    display: flex;
+    >div {
+        width: 60%;
+        img {
+            @include imgSize
+        }
+    }
+    #sacresprit {
+        width: 40%;
+        padding-left: 10px;
+        h2 {
+            @include fontH2;
+            padding-bottom: 50px;
+        }
+        article {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px 30px;
+            transition:transform 1s ease;
+            &:hover {
+                div img {
+                    transform: scale(1.5);
+                }
+                h3 {
+                    transform: translateY(-35px);
+                }
+                p {
+                    transform: translateY(-35px);
+                    opacity: 1;
+                    transition: opacity 1s ease, transform 1s ease;
+                }
+            }
+            div {
+                width: 15%;
+                img {
+                    @include imgSize;
+                    transition: transform 0.3s ease; /* Transition pour l'image */
+                }
+            }
+            h3 {
+                @include fontH3White;
+                text-align: left;
+                padding-left: 50px;
+                transition: transform 1s ease;
+            }
+            p {
+                color: white;
+                font-family: 'Poppins';
+                font-size: 10px;
+                padding-left: 120px;
+                padding-right: 50px;
+                opacity: 0;
+            }
+        }
+    }
+}

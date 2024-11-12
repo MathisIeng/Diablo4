@@ -1,0 +1,82 @@
+
+
+@mixin headerBg {
+    background-image: url(../img/Spiritborn_Keyart_1920x1080.png);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+@mixin logoHeader {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@mixin imgSize {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin displayBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin fontH2 {
+    font-size: 4.3rem;
+    color: white;
+    font-family: 'Diablo';
+}
+
+@mixin padding {
+    padding: 30px 40px;
+}
+
+@mixin fontH3 {
+    font-size: 2.3rem;
+    color: greenyellow;
+    font-family: 'DiabloLight';
+    padding: 50px 0px;
+}
+
+@mixin fontH3White {
+    color: white;
+    font-family: 'DiabloLight';
+}
+
+@mixin fontP {
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Poppins';
+}
+
+@mixin displayEvenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+$bgColorBlack:black;
+
+$white:white;
+
+@mixin pEdition {
+    color: white;
+    font-family: 'Bildbad';
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+
+@mixin pubButton {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Bildbad';
+    background-color: greenyellow;
+    padding: 5px 8px;
+    border-radius: 10px;
+    width: 100%;
+}

@@ -1,0 +1,27 @@
+@import '_var.scss';
+
+.pub {
+    background-color: black;
+    height: 30vh;
+    @include displayEvenly;
+    >div {
+        width: 30%;
+        img {
+            @include imgSize;
+        }
+    }
+    >div {
+        width: 30%;
+        button {
+            @include pubButton;
+            text-decoration: none;
+        }
+        a:visited {
+            color: white;
+        }
+        button:hover {
+            color: greenyellow;
+            background-color: black;
+        }
+    }
+}

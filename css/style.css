@@ -1,0 +1,512 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "DiabloLight";
+  src: url(../font/DiabloLight.ttf);
+}
+@font-face {
+  font-family: "Bildbad";
+  src: url(../font/Bildad.ttf);
+}
+@font-face {
+  font-family: "Diablo";
+  src: url(../font/diablo.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../font/Poppins-Regular.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  overflow: hidden;
+  background-image: url(../img/Spiritborn_Keyart_1920x1080.png);
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+header #logo {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  left: 40px;
+}
+header #logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #burger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+header #burger > li {
+  height: 1px;
+  margin: 10px 0px;
+  background-color: white;
+  transition: transform 0.5s;
+}
+header #burger:hover li:first-of-type {
+  transform: rotate(45deg) translate(-5px, 10px);
+}
+header #burger:hover li:nth-of-type(2) {
+  opacity: 0;
+}
+header #burger:hover li:last-of-type {
+  transform: rotate(-45deg) translate(5px, -21px);
+}
+header #burger:hover + nav {
+  transform: translateX(0);
+}
+header #burger + nav {
+  width: 20vw;
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  height: 80vh;
+  transition: all 0.5s linear;
+  margin-top: 40px;
+  transform: translateX(100%);
+}
+header #burger + nav > ul li {
+  margin: 50px 0;
+}
+header #burger + nav > ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "DiabloLight";
+  font-size: 1.5rem;
+}
+header #burger + nav > ul > li ul::after {
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 17%;
+}
+header #burger + nav > ul > li ul {
+  position: relative;
+  display: flex;
+}
+header #burger + nav > ul > li ul li {
+  width: 100%;
+}
+header #burger + nav > ul > li ul li img {
+  width: 50%;
+}
+
+#restezconnectes {
+  font-family: "Bildbad";
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 10vh;
+  background: linear-gradient(to top, greenyellow, black);
+}
+footer div {
+  width: 15%;
+  margin-left: 30px;
+}
+footer div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer nav {
+  width: 15%;
+}
+footer nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+footer nav ul li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer nav ul li a #twitter {
+  width: 40%;
+  margin-left: 30px;
+}
+footer div {
+  width: 15%;
+  margin-right: 30px;
+}
+footer div button {
+  background-color: greenyellow;
+  color: white;
+  font-family: "Bildbad";
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+footer div button:hover {
+  background-color: black;
+  color: greenyellow;
+}
+
+section:first-of-type #bgWolf {
+  background-image: url(../img/DIV_VesselOfHatred_AshearaTheCanine.png);
+  height: 100vh;
+  background-size: contain;
+  background-position: 2200% center;
+  background-attachment: fixed;
+}
+section:first-of-type #bgWolf > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 40px;
+  width: 55%;
+}
+section:first-of-type #bgWolf > div h2 {
+  font-size: 4.3rem;
+  color: white;
+  font-family: "Diablo";
+}
+section:first-of-type #bgWolf > div h3 {
+  font-size: 2.3rem;
+  color: greenyellow;
+  font-family: "DiabloLight";
+  padding: 50px 0px;
+}
+section:first-of-type #bgWolf > div p {
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Poppins";
+}
+
+section:nth-of-type(2) {
+  background-image: linear-gradient(to right, black, transparent), url(../img/DIV_VesselOfHatred_Mercenaries.png);
+  height: 100vh;
+  background-size: contain;
+  background-position: 1700% center;
+}
+section:nth-of-type(2) > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 40px;
+  width: 55%;
+}
+section:nth-of-type(2) > div h3 {
+  font-size: 2.3rem;
+  color: greenyellow;
+  font-family: "DiabloLight";
+  padding: 50px 0px;
+}
+section:nth-of-type(2) > div p {
+  font-size: 1.3rem;
+  color: white;
+  font-family: "Poppins";
+}
+
+section:nth-of-type(3) {
+  background-color: black;
+  display: flex;
+}
+section:nth-of-type(3) > div {
+  width: 60%;
+}
+section:nth-of-type(3) > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section:nth-of-type(3) #sacresprit {
+  width: 40%;
+  padding-left: 10px;
+}
+section:nth-of-type(3) #sacresprit h2 {
+  font-size: 4.3rem;
+  color: white;
+  font-family: "Diablo";
+  padding-bottom: 50px;
+}
+section:nth-of-type(3) #sacresprit article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px 30px;
+  transition: transform 1s ease;
+}
+section:nth-of-type(3) #sacresprit article:hover div img {
+  transform: scale(1.5);
+}
+section:nth-of-type(3) #sacresprit article:hover h3 {
+  transform: translateY(-35px);
+}
+section:nth-of-type(3) #sacresprit article:hover p {
+  transform: translateY(-35px);
+  opacity: 1;
+  transition: opacity 1s ease, transform 1s ease;
+}
+section:nth-of-type(3) #sacresprit article div {
+  width: 15%;
+}
+section:nth-of-type(3) #sacresprit article div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease; /* Transition pour l'image */
+}
+section:nth-of-type(3) #sacresprit article h3 {
+  color: white;
+  font-family: "DiabloLight";
+  text-align: left;
+  padding-left: 50px;
+  transition: transform 1s ease;
+}
+section:nth-of-type(3) #sacresprit article p {
+  color: white;
+  font-family: "Poppins";
+  font-size: 10px;
+  padding-left: 120px;
+  padding-right: 50px;
+  opacity: 0;
+}
+
+h2 {
+  font-size: 4.3rem;
+  color: white;
+  font-family: "Diablo";
+  text-align: center;
+  padding: 30px 0px;
+}
+
+section:nth-of-type(4) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section:nth-of-type(4) article {
+  margin: 30px 0px;
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section:nth-of-type(4) article h3 {
+  color: white;
+  font-family: "DiabloLight";
+  font-size: 40px;
+  text-align: center;
+}
+section:nth-of-type(4) article p {
+  color: white;
+  font-family: "Poppins";
+  padding: 30px 0px;
+}
+section:nth-of-type(4) article iframe {
+  border-radius: 30px;
+  height: 35vh;
+}
+
+h2 {
+  font-size: 4.3rem;
+  color: white;
+  font-family: "Diablo";
+  text-align: center;
+  padding: 30px 0px;
+}
+
+section:last-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 20px 60px;
+  gap: 20px;
+  overflow: hidden;
+}
+section:last-of-type #ultimate, section:last-of-type #deluxe, section:last-of-type #normal {
+  position: relative;
+  z-index: 1000;
+}
+section:last-of-type #ultimate img, section:last-of-type #deluxe img, section:last-of-type #normal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section:last-of-type #ultimate::after, section:last-of-type #deluxe::after, section:last-of-type #normal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  opacity: 0;
+  z-index: 2000;
+  transition: opacity 1s ease, transform 1s ease;
+}
+section:last-of-type #ultimate:hover::after, section:last-of-type #deluxe:hover::after, section:last-of-type #normal:hover::after {
+  opacity: 0.5;
+}
+section:last-of-type #ultimate:hover #absolute1 p, section:last-of-type #ultimate:hover #absolute2 p, section:last-of-type #ultimate:hover #absolute3 p, section:last-of-type #deluxe:hover #absolute1 p, section:last-of-type #deluxe:hover #absolute2 p, section:last-of-type #deluxe:hover #absolute3 p, section:last-of-type #normal:hover #absolute1 p, section:last-of-type #normal:hover #absolute2 p, section:last-of-type #normal:hover #absolute3 p {
+  transform: translateY(0);
+}
+section:last-of-type #ultimate {
+  grid-area: 1/1/3/2;
+  height: 100%;
+}
+section:last-of-type #ultimate > div {
+  height: 100%;
+}
+section:last-of-type #ultimate #absolute1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4000;
+  margin-top: 50%;
+}
+section:last-of-type #ultimate #absolute1 p {
+  color: white;
+  font-family: "Bildbad";
+  font-size: 3.6rem;
+  text-align: center;
+  padding-bottom: 100px;
+  position: relative;
+  transform: translateY(-400%);
+  transition: transform 1s ease;
+}
+section:last-of-type #ultimate #absolute1 p::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90px;
+  background-color: white;
+  top: 70%;
+  left: 42%;
+}
+section:last-of-type #deluxe {
+  grid-area: 1/2/2/3;
+}
+section:last-of-type #deluxe #absolute2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4000;
+  margin-top: 25%;
+}
+section:last-of-type #deluxe #absolute2 p {
+  color: white;
+  font-family: "Bildbad";
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 50px;
+  transform: translateY(-400%);
+  transition: transform 1s ease;
+}
+section:last-of-type #deluxe #absolute2 p::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 60px;
+  background-color: white;
+  top: 70%;
+  left: 45%;
+}
+section:last-of-type #normal {
+  grid-area: 2/2/3/3;
+}
+section:last-of-type #normal #absolute3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4000;
+  margin-top: 25%;
+}
+section:last-of-type #normal #absolute3 p {
+  color: white;
+  font-family: "Bildbad";
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 50px;
+  transform: translateY(400%);
+  transition: transform 1s ease;
+}
+section:last-of-type #normal #absolute3 p::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 60px;
+  background-color: white;
+  top: 70%;
+  left: 45%;
+}
+
+.pub {
+  background-color: black;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pub > div {
+  width: 30%;
+}
+.pub > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pub > div {
+  width: 30%;
+}
+.pub > div button {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Bildbad";
+  background-color: greenyellow;
+  padding: 5px 8px;
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+}
+.pub > div a:visited {
+  color: white;
+}
+.pub > div button:hover {
+  color: greenyellow;
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */

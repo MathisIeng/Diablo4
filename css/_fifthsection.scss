@@ -1,0 +1,136 @@
+@import '_var.scss';
+
+h2 {
+    @include fontH2;
+    text-align: center;
+    padding: 30px 0px;
+}
+section:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px 60px;
+    gap: 20px;
+    overflow: hidden;
+
+    #ultimate, #deluxe, #normal {
+        position: relative;
+        z-index: 1000;
+        img {
+            @include imgSize;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            opacity: 0;
+            z-index: 2000;
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        &:hover::after {
+            opacity: 0.5; 
+        }
+        &:hover #absolute1 p,
+        &:hover #absolute2 p,
+        &:hover #absolute3 p {
+            transform: translateY(0);
+        }
+    }
+
+
+    #ultimate {
+        grid-area: 1 / 1 / 3 / 2;
+        height: 100%;
+        >div{
+            height:100%;
+        }
+        
+        #absolute1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4000;
+            margin-top: 50%;
+            p {
+                color: white;
+                font-family: 'Bildbad';
+                font-size: 3.6rem;
+                text-align: center;
+                padding-bottom: 100px;
+                position: relative;
+                transform: translateY(-400%);
+                transition: transform 1s ease;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 90px;
+                    background-color: white;
+                    top: 70%;
+                    left: 42%;
+                }
+            }
+        }
+    }
+
+    #deluxe {
+        grid-area: 1 / 2 / 2 / 3;
+        #absolute2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4000;
+            margin-top: 25%;
+            p {
+                @include pEdition;
+                transform: translateY(-400%);
+                transition: transform 1s ease;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 60px;
+                    background-color: white;
+                    top: 70%;
+                    left: 45%;
+                }
+            }
+        }
+    }
+
+    #normal {
+        grid-area: 2 / 2 / 3 / 3;
+        #absolute3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4000;
+            margin-top: 25%;
+            p {
+                @include pEdition;
+                transform: translateY(400%);
+                transition: transform 1s ease;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    width: 60px;
+                    background-color: white;
+                    top: 70%;
+                    left: 45%;
+                }
+            }
+        }
+    }
+}

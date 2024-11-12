@@ -1,0 +1,21 @@
+@import '_var.scss';
+
+section:nth-of-type(2) {
+    background-image: linear-gradient(to right, black, transparent),
+    url(../img/DIV_VesselOfHatred_Mercenaries.png);
+    height: 100vh;
+    background-size: contain;
+    background-position: 1700% center;
+    >div {
+        @include displayBetween;
+        flex-direction: column;
+        @include padding;
+        width: 55%;
+        h3 {
+            @include fontH3;
+        }
+        p {
+            @include fontP;
+        }
+    }
+}   
